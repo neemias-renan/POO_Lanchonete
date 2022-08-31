@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProduto xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Produto>
+    <Id>1</Id>
+    <Descricao>limão</Descricao>
+    <Qtd>50</Qtd>
+    <Preco>5</Preco>
+    <CategoriaId>1</CategoriaId>
+  </Produto>
+  <Produto>
+    <Id>5</Id>
+    <Descricao>Coca Cola</Descricao>
+    <Qtd>2</Qtd>
+    <Preco>5</Preco>
+    <CategoriaId>2</CategoriaId>
+  </Produto>
+</ArrayOfProduto>
