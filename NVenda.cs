@@ -52,7 +52,13 @@ class NVenda {
 	
   public void  Inserir(Venda v, bool pedido){
 		int max = 0;
-		max = vendas.Max(obj => obj.GetId());
+		
+		foreach(Venda obj in vendas)
+      if (obj.Id > max) max = obj.Id;
+    v.Id = max + 1;
+	
+		
+		Console.WriteLine(max);
 		v.SetId(max + 1);
 		vendas.Add(v);
 		v.SetPedido(pedido);

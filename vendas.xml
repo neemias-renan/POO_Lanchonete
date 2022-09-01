@@ -1,2 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfVenda xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+<ArrayOfVenda xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Venda>
+    <Id>2</Id>
+    <Data>2022-09-01T16:40:46.531274+00:00</Data>
+    <Pedido>true</Pedido>
+    <MesaId>1</MesaId>
+    <Itens>
+      <VendaItem>
+        <Qtd>2</Qtd>
+        <Preco>5</Preco>
+        <ProdutoId>1</ProdutoId>
+      </VendaItem>
+    </Itens>
+  </Venda>
+  <Venda>
+    <Id>2</Id>
+    <Data>2022-09-01T16:40:46.531274+00:00</Data>
+    <Pedido>true</Pedido>
+    <MesaId>1</MesaId>
+    <Itens>
+      <VendaItem>
+        <Qtd>2</Qtd>
+        <Preco>5</Preco>
+        <ProdutoId>1</ProdutoId>
+      </VendaItem>
+    </Itens>
+  </Venda>
+  <Venda>
+    <Id>4</Id>
+    <Data>2022-09-01T16:44:07.079501+00:00</Data>
+    <Pedido>true</Pedido>
+    <MesaId>2</MesaId>
+    <Itens />
+  </Venda>
+  <Venda>
+    <Id>4</Id>
+    <Data>2022-09-01T16:44:07.079501+00:00</Data>
+    <Pedido>true</Pedido>
+    <MesaId>2</MesaId>
+    <Itens />
+  </Venda>
+</ArrayOfVenda>

@@ -14,4 +14,11 @@
     <Preco>5</Preco>
     <CategoriaId>2</CategoriaId>
   </Produto>
+  <Produto>
+    <Id>2</Id>
+    <Descricao>2</Descricao>
+    <Qtd>2</Qtd>
+    <Preco>2</Preco>
+    <CategoriaId>1</CategoriaId>
+  </Produto>
 </ArrayOfProduto>

@@ -1,2 +1,2 @@
 # poo-projetofinal
-Repositório referente ao projeto final da matéria de POO.
+Este repositório é direcionado ao projeto de conclusão da disciplina de POO.

@@ -23,20 +23,20 @@ class  MainClass{
       nvenda.Abrir();
     }
     catch(Exception erro) {
-      string E = erro.Message;
+			Console.WriteLine(erro.Message);
     }
 
     int op = 99;
     int opção = 0;
-    int perfil = 0;
+    int opInicial = 0;
     
     do {
       try{
-        if (perfil == 0){
+        if (opInicial == 0){
           op = -1;
-          perfil = MenuUsuario();
+          opInicial = MenuUsuario();
         }
-        if (perfil == 1){
+        if (opInicial == 1){
           opção = MenuVendedorOpcao();
           if (opção == 0){
             op = 0;
@@ -74,18 +74,18 @@ class  MainClass{
             }
           
             else if(opção == 99){
-              perfil = 0;
+              opInicial = 0;
             }
           }
         
-        if (perfil == 2 && mesaLogin == null){
+        if (opInicial == 2 && mesaLogin == null){
           op = MenuMesaLogin();
           switch (op){
             case 1  : DefinirMesa(); break;
-            case 99 : perfil = 0; break;
+            case 99 : opInicial = 0; break;
           }
         }
-        if (perfil == 2 && mesaLogin != null){
+        if (opInicial == 2 && mesaLogin != null){
           op = MenuMesaLogout();
           switch (op){
             case 1  : MesaProdutoListar(); break;
@@ -97,7 +97,7 @@ class  MainClass{
         }
   }
     catch (Exception erro) {
-        string E = erro.Message;
+				Console.WriteLine(erro.Message);
         op = 100;
       }
     } while (op != 0); {
@@ -113,19 +113,18 @@ class  MainClass{
     } 
     catch(Exception erro) {
       string E = erro.Message;
+			Console.WriteLine(E);
     }
   }
 
   public static int MenuUsuario() {
     Console.WriteLine("|=======   Lanchonete   =======|");
     Console.WriteLine("|                              |");
-    Console.WriteLine("| 0 - Sair do sistema!         |");
-    Console.WriteLine("|                              |");
     Console.WriteLine("| 1 - Gerenciador              |");
     Console.WriteLine("| 2 - Realizar pedido          |");
     Console.WriteLine("|                              |");
     Console.WriteLine("|==============================|");
-    Console.Write("Informe o perfil selecionado: ");
+    Console.Write("Informe a opção desejada: ");
     int op = int.Parse(Console.ReadLine());
     Console.WriteLine();
 		Console.Clear();
@@ -142,7 +141,6 @@ class  MainClass{
     Console.WriteLine("|==== Área de Gerenciamento =====|");
     Console.WriteLine("|                                |");
     Console.WriteLine("| 0 - Sair do sistema!           |");
-    Console.WriteLine("|                                |");
     Console.WriteLine("| 1 - Categoria                  |");
     Console.WriteLine("| 2 - Produto                    |");
     Console.WriteLine("| 3 - Mesa                       |");
@@ -213,11 +211,11 @@ class  MainClass{
     
     Console.WriteLine("|================================|");
     Console.WriteLine("|              MESA              |");
-    Console.WriteLine("| 00 - Sair do sistema!          |");
+    Console.WriteLine("| 0 - Sair do sistema!           |");
     Console.WriteLine("|                                |");
-    Console.WriteLine("| 01 - Listar                    |");
-    Console.WriteLine("| 02 - Inserir                   |");
-    Console.WriteLine("| 03 - Excluir                   |");
+    Console.WriteLine("| 1 - Listar                     |");
+    Console.WriteLine("| 2 - Inserir                    |");
+    Console.WriteLine("| 3 - Excluir                    |");
     Console.WriteLine("|                                |");
     Console.WriteLine("| 99 - Voltar ao menu anterior   |");
     Console.WriteLine("|================================|");
@@ -236,9 +234,9 @@ class  MainClass{
     
     Console.WriteLine("|==============================|");
     Console.WriteLine("|                              |");
-    Console.WriteLine("| 00 - Sair do sistema!        |");
+    Console.WriteLine("|  0 - Sair do sistema!        |");
     Console.WriteLine("|                              |");
-    Console.WriteLine("| 01 - Definir Mesa            |");
+    Console.WriteLine("|  1 - Definir Mesa            |");
     Console.WriteLine("| 99 - Voltar ao menu anterior |");
     Console.WriteLine("|                              |");
     Console.WriteLine("|==============================|");
@@ -258,16 +256,15 @@ class  MainClass{
     Console.WriteLine();
     Console.WriteLine("|==================================|");
     Console.WriteLine("|                                  |");
-    Console.WriteLine("| 00 - Sair do sistema!            |");
+    Console.WriteLine("|  0 - Sair do sistema!            |");
     Console.WriteLine("|                                  |");
-    Console.WriteLine("| 01 - Exibir cardápio             |");
-    Console.WriteLine("| 02 - Realizar pedido             |");
-    Console.WriteLine("| 03 - Visualizar o pedido         |");
-    Console.WriteLine("| 04 - Limpar o pedido             |");
+    Console.WriteLine("|  1 - Exibir cardápio             |");
+    Console.WriteLine("|  2 - Realizar pedido             |");
+    Console.WriteLine("|  3 - Visualizar o pedido         |");
+    Console.WriteLine("|  4 - Limpar o pedido             |");
     Console.WriteLine("|                                  |");
     Console.WriteLine("| 99 - Voltar ao menu anterior     |");
     Console.WriteLine("|==================================|");
-    Console.WriteLine();
     Console.Write("Informe a opção desejada: ");
     int op = int.Parse(Console.ReadLine());
     Console.WriteLine();
@@ -489,7 +486,7 @@ class  MainClass{
   public static void MesaLogout(){
     Console.WriteLine("|====== Saindo da Mesa ======|");
     Console.WriteLine();
-    // if (mesaVenda != null) nvenda.Inserir(mesaVenda, true);
+    if (mesaVenda != null) nvenda.Inserir(mesaVenda, true);
     mesaLogin = null;
     mesaVenda = null;
   }

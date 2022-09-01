@@ -58,8 +58,8 @@ using System;
   
     public override string ToString(){
       if (categoria == null)
-        return id + " - " + descricao + " - estoque: " + qtd + " - preço: R$" + preco.ToString("0.00");
+        return id + " - " + descricao + " - preço: R$" + preco.ToString("0.00");
       else
-        return id + " - " + descricao + " - estoque: " + qtd + " - preço: R$" + preco.ToString("0.00") + " - " + categoria.GetDescricao();
+        return id + " - " + descricao + " - preço: R$" + preco.ToString("0.00") + " | " + categoria.GetDescricao();
     }
 }
