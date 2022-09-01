@@ -25,13 +25,14 @@ class  MainClass{
     catch(Exception erro) {
 			Console.WriteLine(erro.Message);
     }
-
+	
     int op = 99;
     int opção = 0;
     int opInicial = 0;
     
     do {
       try{
+				Console.Clear();
         if (opInicial == 0){
           op = -1;
           opInicial = MenuUsuario();
