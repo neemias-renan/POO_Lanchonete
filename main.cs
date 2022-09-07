@@ -32,7 +32,7 @@ class  MainClass{
     
     do {
       try{
-				Console.Clear();
+				
         if (opInicial == 0){
           op = -1;
           opInicial = MenuUsuario();
@@ -128,7 +128,7 @@ class  MainClass{
     Console.Write("Informe a opção desejada: ");
     int op = int.Parse(Console.ReadLine());
     Console.WriteLine();
-		Console.Clear();
+		
     return op;
   }
   
@@ -151,7 +151,7 @@ class  MainClass{
     Console.Write("Informe a opção desejada: ");
     int op = int.Parse(Console.ReadLine());
     Console.WriteLine();
-		Console.Clear();
+		
     return op;
   }
   public static int MenuVendedorCategoria(){
@@ -175,7 +175,7 @@ class  MainClass{
     Console.Write("Informe a opção desejada: ");
     int op = int.Parse(Console.ReadLine());
     Console.WriteLine();
-		Console.Clear();
+		
     return op;
   }
 
@@ -199,7 +199,7 @@ class  MainClass{
     Console.Write("Informe a opção desejada: ");
     int op = int.Parse(Console.ReadLine());
     Console.WriteLine();
-		Console.Clear();
+		
     return op;
   }
 
@@ -223,7 +223,7 @@ class  MainClass{
     Console.Write("Informe a opção desejada: ");
     int op = int.Parse(Console.ReadLine());
     Console.WriteLine();
-		Console.Clear();
+		
     return op;
   }
 
@@ -244,7 +244,7 @@ class  MainClass{
     Console.Write("Informe a opção desejada: ");
     int op = int.Parse(Console.ReadLine());
     Console.WriteLine();
-		Console.Clear();
+		
     return op;
   }
 
@@ -269,8 +269,8 @@ class  MainClass{
     Console.Write("Informe a opção desejada: ");
     int op = int.Parse(Console.ReadLine());
     Console.WriteLine();
-		Thread.Sleep(3000);
-		Console.Clear();
+		
+		
     return op;
   }
   public static void CategoriaListar(){
@@ -309,8 +309,8 @@ class  MainClass{
     ncategoria.Atualizar(c);
     Console.WriteLine();
     Console.WriteLine("Categoria atualiada com sucesso!!");
-		Thread.Sleep(3000);
-		Console.Clear();
+		
+		
 
   }
   public static void CategoriaExcluir(){
@@ -322,8 +322,8 @@ class  MainClass{
     ncategoria.Excluir(c);
     Console.WriteLine();
     Console.WriteLine("Categoria excluída com sucesso!");
-		Thread.Sleep(3000);
-		Console.Clear();
+		
+		
   }
 	
   public static void ProdutoListar(){
@@ -384,8 +384,8 @@ class  MainClass{
     Console.WriteLine();
     Console.Write("Produto atualizado com sucesso!");
     Console.WriteLine();
-		Thread.Sleep(3000);
-		Console.Clear();
+		
+		
   }
   public static void ProdutoExcluir(){
     Console.WriteLine("|===== Exclusão de Produtos =====|");
@@ -398,8 +398,8 @@ class  MainClass{
     Console.WriteLine();
     Console.Write("Produto excluído com sucesso!");
     Console.WriteLine();
-		Thread.Sleep(3000);
-		Console.Clear();Console.Clear();
+		
+		
   }
  
 	
@@ -436,8 +436,8 @@ class  MainClass{
     Console.WriteLine();
     Console.Write("Mesa excluído com sucesso!");
     Console.WriteLine();
-		Thread.Sleep(3000);
-		Console.Clear();
+		
+		
   }
   public static void VendaListar() {
     Console.WriteLine("|======= Lista de Vendas =======|");
@@ -469,8 +469,8 @@ class  MainClass{
         MesAno = key,
         Total = items.Sum(item => item.Total) });    
     foreach(var item in r2) Console.WriteLine(item);
-    Thread.Sleep(3000);
-		Console.Clear();
+    
+		
   }
   
   public static void DefinirMesa(){
